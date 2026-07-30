@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XV Años - Invitación</title>
+    <!-- Conexión con el archivo CSS -->
+    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    
+    <!-- ===================== HEADER ===================== -->
+    <!-- Espacio para el nombre y foto principal de la quinceañera -->
+    <header class="hero">
+        <div class="hero-content">
+            <!-- Foto principal de la quinceañera -->
+            
+            <!-- Nombre de la quinceañera -->
+            <h1 class="nombre">Michelle Garcia</h1>
+            <h4 class="subtitulo">Mis XV Años</h4>
+            <h5 class="fecha">22 de Agosto del 2026</h5>
+            <h3 style="margin-top: 200px;">“Deléitate a si mismo en Jehová, y él te concederá las peticiones de tu corazón” Salmos 37:4</h3>
+        </div>
+    </header>
+
+    <section class="parallax">
+        <h3>Con inmensa gratitud a Dios por su fidelidad, mis padres Filiberto García, Janeth Galindo y yo Michelle Garcia te invitamos a celebrar mis XV años y dar gracias por esta nueva etapa que Dios me permite comenzar.</h3>
+    </section>
+
+   <!-- ===== CARRUSEL DE IMÁGENES ===== -->
+    <section id="carrusel" class="seccion fade-in">
+        <div class="contenedor-carrusel">
+            <div class="slide">
+                <img src="vaquera.jfif" alt="Foto 1">
+            </div>
+            <div class="slide">
+                <img src="bebesonriendo.jfif" alt="Foto 2">
+            </div>
+            <div class="slide">
+                <img src="princesa.jfif" alt="Foto 3">
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TEMPORIZADOR ELEGANTE ===== -->
+    <section id="temporizador" class="seccion">
+        <!-- Imagen de título -->
+        <div class="titulo-imagen">
+            <img src="Faltan.png" alt="Título del Evento">
+        </div>
+        <div class="contador">
+            <div class="tiempo">
+                <span id="dias">00</span>
+                <small>Días</small>
+            </div>
+            <div class="tiempo">
+                <span id="horas">00</span>
+                <small>Horas</small>
+            </div>
+            <div class="tiempo">
+                <span id="minutos">00</span>
+                <small>Minutos</small>
+            </div>
+            <div class="tiempo">
+                <span id="segundos">00</span>
+                <small>Segundos</small>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+    // ===== SCRIPT PARA ACTUALIZAR EL TEMPORIZADOR ===== //
+    const fechaEvento = new Date("August 22, 2026 18:30:00").getTime();
+
+    const cuentaAtras = setInterval(() => {
+        const ahora = new Date().getTime();
+        const diferencia = fechaEvento - ahora;
+
+        if (diferencia < 0) {
+            clearInterval(cuentaAtras);
+            document.getElementById("temporizador").innerHTML = "<h2>¡El gran día ha llegado!</h2>";
+            return;
+        }
+
+        const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+        const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+        const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+        document.getElementById("dias").textContent = dias.toString().padStart(2, '0');
+        document.getElementById("horas").textContent = horas.toString().padStart(2, '0');
+        document.getElementById("minutos").textContent = minutos.toString().padStart(2, '0');
+        document.getElementById("segundos").textContent = segundos.toString().padStart(2, '0');
+    }, 1000);
+    </script>
+
+     <!-- ===================== INFORMACIÓN DE LA MISA ===================== -->
+     <section class="misa">
+        <h2>Ceremonia</h2>
+        <h4>Servicio de Acción de Gracias: Iglesia Principe de Paz</h4>
+        <p>Dirección: 2321 Trenton Rd Houston, TX 77093</p>
+        
+        <!-- Imagen del lugar -->
+        <img src="iglesiaprincipe.png" alt="Ceremonia" class="imagen-lugar">
+
+        <!-- Botón Bezel que redirige a Google Maps -->
+         <div style="text-align: center;">
+            <a href="https://maps.app.goo.gl/god34jxrCHwywmpbA" target="_blank" class="btn-bezel">
+                Ver en Google Maps
+            </a>
+        </div>
+
+    </section>
+
+    <!-- ===================== INFORMACIÓN DE LA SALON ===================== -->
+    <section class="misa">
+        <h2>Recepción</h2>
+        <h4>Herrera´s Event Hall</h4>
+        <p>Dirección: 14110 Beaumont Hwy Houston, TX 77049</p>
+        
+        <!-- Imagen del lugar -->
+        <img src="eventhall.png" alt="Ceremonia" class="imagen-lugar">
+
+        <!-- Botón Bezel que redirige a Google Maps -->
+         <div style="text-align: center;">
+            <a href="https://maps.app.goo.gl/g7CfkcTWV6tdveuz7" target="_blank" class="btn-bezel">
+                Ver en Google Maps
+            </a>
+        </div>
+
+    </section>
+    
+
+<section class="parallax2"></section>
+
+     <!-- ===================== ITINERARIO ===================== -->
+    <section class="itinerario">
+        <img src="itinerario.jpeg"alt="Imagen de itinerario">
+    </section>
+
+    <!-- ===== CARRUSEL DE IMÁGENES ===== -->
+    <section id="carrusel" class="seccion fade-in">
+        <div class="contenedor-carrusel">
+            <div class="slide">
+                <img src="estacionamiento.jfif" alt="Foto 1">
+            </div>
+            <div class="slide">
+                <img src="acostada.jfif" alt="Foto 2">
+            </div>
+            <div class="slide">
+                <img src="sobrerama.jfif" alt="Foto 3">
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== DRESS CODE COKTAIL ===== -->
+
+    <section class="vestimenta">
+        <h2>Recomendaciones</h2>
+        <h4>Formal</h4>
+        <img src="vestimenta.png" alt="traje" class="imagen-lugar">
+    </section>
+
+    <!-- ===== COGALLE ===== -->
+     
+    <section class="parallax3"></section>
+    
+    <!-- ===================== CONFIRMACIÓN DE ASISTENCIA ===================== -->
+    <section id="formulario-asistencia" class="seccion">
+        <h2>Confirma tu asistencia</h2>
+            <h6>"Cada instante nos acerca al momento de compartir sonrisas, abrazos y emociones. 
+                Esperamos con júbilo su llegada para celebrar juntos el florecer de un nuevo capítulo en esta historia"</h6>
+
+            <!-- Botón de envío -->
+            <div class="campo-formulario">
+                <button onclick="openWhatsApp()">
+                    <i class="fa-brands fa-whatsapp"></i> Abrir WhatsApp
+                </button>
+            </div>
+    </section>
+
+    <!-- ===================== SCRIPT FORMULARIO ===================== -->
+        <script>
+            function openWhatsApp() {
+            const phoneNumber = "18326281696"; // Número de teléfono con código de país.
+            const url = `https://wa.me/${phoneNumber}`;
+            window.open(url, '_blank');
+            }
+        </script>
+
+
+        <!-- ===== MÚSICA AUTOMÁTICA EN LA INVITACIÓN ===== -->
+        <div class="player-musica">
+            <audio id="musica-fondo" autoplay loop>
+                <source src="musica.mp3" type="audio/mpeg">
+            </audio>
+            <button id="toggleMusica">⏸ Reproducir Música</button>
+        </div>
+
+    <script>
+        // Controlar el botón de pausar/reanudar
+        const musica = document.getElementById("musica-fondo");
+        const boton = document.getElementById("toggleMusica");
+
+        boton.addEventListener("click", () => {
+            if (musica.paused) {
+                musica.play();
+                boton.textContent = "⏸ Pausar Música";
+            } else {
+                musica.pause();
+                boton.textContent = "▶ Reanudar Música";
+            }
+        });
+    </script>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer>
+        <img src="footer.png" alt="Descripción de la imagen del footer" class="footer-img">
+    </footer>
+        
+</body>
+</html>
+
+

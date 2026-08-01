@@ -460,6 +460,14 @@ section {
     margin-bottom: 25px;
 }
 
+.imagen-regalo {
+    width: 50%;
+    max-width: 300px;
+    display: block;
+    margin: 15px auto;
+    border-radius: 12px;
+}
+
 .campo-formulario button {
     display: flex;   /* Se ajusta al texto */
     margin: 0 auto;
